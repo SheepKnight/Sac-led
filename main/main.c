@@ -51,6 +51,8 @@ typedef unsigned char byte;
 #define PIN_NUM_CLK  2
 #define PIN_NUM_CS   15
 
+#define CASCADE_MATRIX_SIZE 6
+
 #define CHECK(expr, msg) \
     while ((res = expr) != ESP_OK) { \
         printf(msg "\n", res); \
@@ -83,7 +85,7 @@ TaskHandle_t xHandle = NULL;
 uint16_t lbuffer_d;
 uint16_t rbuffer_d;
 
-uint8_t ledBuffer[48];
+uint8_t ledBuffer[(CASCADE_MATRIX_SIZE+2)*8];
 char * trackInfo[4];
 
 strand_t STRANDS[] = { // Avoid using any of the strapping pins on the ESP32
@@ -163,17 +165,17 @@ void putChar(uint8_t pos, uint8_t index) {
 
 void putToScreen(max7219_t * dev) {
 	
-	for (byte offset = 0; offset < 4; offset++) {
+	for (byte offset = 0; offset < CASCADE_MATRIX_SIZE; offset++) {
 		byte m[8] = { 0 }; 
 		for (byte col = 0; col < 8; col++) { 
-			byte b = ledBuffer[(4-offset) * 8 + (7-col)];
+			byte b = ledBuffer[(CASCADE_MATRIX_SIZE-offset) * 8 + (7-col)];
 			for (byte bit = 0; bit < 8; bit++) { 
 				if (b & 1) m[bit] |= (128 >> col); 
 				b >>= 1; 
 			} 
 		} 
 		for (byte col = 0; col < 8; col++) 
-			max7219_set_digit(dev, (3-offset)*8 + col, m[col]);
+			max7219_set_digit(dev, (CASCADE_MATRIX_SIZE-1-offset)*8 + col, m[col]);
 			
 	}
 	
@@ -229,7 +231,7 @@ void workLed(void * pvParameters) {
 
 	// Configure device
 	max7219_t dev = {
-		.cascade_size = 4,
+		.cascade_size = CASCADE_MATRIX_SIZE,
 		.digits = 0,
 		.mirrored = true
 	};
