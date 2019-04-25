@@ -1,0 +1,70 @@
+In archive M:/msys32/home/albin/esp-idf/projects/a2dp_sink/build/esp32_digital_led_lib/libesp32_digital_led_lib.a:
+
+esp32_digital_led_lib.o:     file format elf32-xtensa-le
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .iram1.19.literal 00000024  00000000  00000000  00000034  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+  1 .iram1.20.literal 00000020  00000000  00000000  00000058  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+  2 .iram1.18.literal 00000020  00000000  00000000  00000078  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+  3 .literal.digitalLeds_resetPixels 00000008  00000000  00000000  00000098  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+  4 .literal.digitalLeds_initStrands 000000b4  00000000  00000000  000000a0  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+  5 .text         00000000  00000000  00000000  00000154  2**0
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  6 .data         00000000  00000000  00000000  00000154  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  7 .bss          00000000  00000000  00000000  00000154  2**0
+                  ALLOC
+  8 .iram1.19     00000157  00000000  00000000  00000154  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+  9 .iram1.20     000000bf  00000000  00000000  000002ac  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+ 10 .iram1.18     0000013e  00000000  00000000  0000036c  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+ 11 .text.digitalLeds_resetPixels 0000001c  00000000  00000000  000004ac  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+ 12 .text.digitalLeds_initStrands 0000032e  00000000  00000000  000004c8  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+ 13 .bss._ZL15rmt_intr_handle 00000004  00000000  00000000  000007f8  2**2
+                  ALLOC
+ 14 .bss._ZL14localStrandCnt 00000004  00000000  00000000  000007f8  2**2
+                  ALLOC
+ 15 .bss._ZL12localStrands 00000004  00000000  00000000  000007f8  2**2
+                  ALLOC
+ 16 .dram1.17     00000020  00000000  00000000  000007f8  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+ 17 .dram1.16     00000020  00000000  00000000  00000818  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+ 18 .rodata._ZL12ledParamsAll 000000d8  00000000  00000000  00000838  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+ 19 .debug_frame  00000088  00000000  00000000  00000910  2**2
+                  CONTENTS, RELOC, READONLY, DEBUGGING
+ 20 .eh_frame     00000070  00000000  00000000  00000998  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, DATA
+ 21 .debug_info   00001c45  00000000  00000000  00000a08  2**0
+                  CONTENTS, RELOC, READONLY, DEBUGGING
+ 22 .debug_abbrev 000003a1  00000000  00000000  0000264d  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 23 .debug_loc    0000044a  00000000  00000000  000029ee  2**0
+                  CONTENTS, RELOC, READONLY, DEBUGGING
+ 24 .debug_aranges 00000040  00000000  00000000  00002e38  2**0
+                  CONTENTS, RELOC, READONLY, DEBUGGING
+ 25 .debug_ranges 00000048  00000000  00000000  00002e78  2**0
+                  CONTENTS, RELOC, READONLY, DEBUGGING
+ 26 .debug_line   00000866  00000000  00000000  00002ec0  2**0
+                  CONTENTS, RELOC, READONLY, DEBUGGING
+ 27 .debug_str    00001506  00000000  00000000  00003726  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 28 .comment      0000003c  00000000  00000000  00004c2c  2**0
+                  CONTENTS, READONLY
+ 29 .xtensa.info  00000038  00000000  00000000  00004c68  2**0
+                  CONTENTS, READONLY
+ 30 .xt.lit       00000028  00000000  00000000  00004ca0  2**0
+                  CONTENTS, RELOC, READONLY
+ 31 .xt.prop      000002dc  00000000  00000000  00004cc8  2**0
+                  CONTENTS, RELOC, READONLY
